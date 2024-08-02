@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  position: relative;
+  height: 100vh; /* Ensure body covers the full viewport height */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/Assests/carousel-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Adjust the opacity value as needed */
+  z-index: -1;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 30px;
+  margin-top: 12px;
+  position: relative;
+}
+
+.nav-link, .homee, .wwe, .wwf, .contaacte {
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px; /* Add padding to maintain consistent size */
+}
+
+.nav-link:hover {
+  background-color: #ddd;
+}
+
+.nav-item:hover .nav-link, .nav-item:hover .homee, .nav-item:hover .wwe, .nav-item:hover .wwf, .nav-item:hover .contaacte {
+  color: white;
+  background-color: #e31c25;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.section {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.hero-section {
+  position: relative;
+  margin-top: 230px;
+  margin-left: 180px;
+}
+
+.textee {
+  color: #e31c25;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 480px;
+  
+  font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+
+.specialize-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 190px; /* Adjust the width as per your requirement */
+  height: 300px;
+  margin-bottom: 200px;
+}
+
+.textee1 {
+  margin-top: 10px;
+  margin-left: 590px;
+  font-family: "Audiowide", sans-serif;
+  font-size: 49px;
+  font-weight: bold;
+  color: white;
+}
+
+.textee2 {
+  margin-top: 10px;
+  margin-left: 620px;
+  font-family: "Audiowide", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.ggx {
+  margin-left: 23px;
+  color: white;
+  padding: auto;
+  cursor: pointer;
+}
+
+.gg {
+  background-color: transparent; /* Make background transparent */
+  border: 3px solid white;
+  color: white;
+  /* padding: 1px 30px; */
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 695px;
+  cursor: pointer;
+  /* border-radius: 20px; */
+  font-weight: bold;
+}
+
+.gg:hover {
+  background-color: white; /* Change background to white on hover */
+  color: #e31c25; /* Ensure text color remains readable */
+  /* border-radius: 50px; */
+}
+
+.ar {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.textee3 {
+  margin-top: 210px;
+  margin-left: 620px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  letter-spacing: 5px;
+}

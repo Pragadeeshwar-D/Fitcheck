@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navbar-nav {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 30px;
+    margin-top: 12px;
+  }
+  
+  .nav-link, .homee, .wwe, .wwf {
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  
+  .nav-link:hover {
+    background-color: #ddd;
+  }
+  
+  .nav-item:hover .nav-link, .nav-item:hover .homee, .nav-item:hover .wwe, .nav-item:hover .wwf {
+    color: white;
+    background-color: #e31c25;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  .contact-left {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .contact-left-title h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  
+  .contact-left hr {
+    border: 1px solid #e31c25;
+    margin: 10px 0;
+  }
+  
+  .contact-inputs {
+    width: calc(100% - 22px); /* Uniform size for all input fields */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    box-sizing: border-box;
+  }
+  
+  .contact-inputs::placeholder {
+    color: #aaa;
+  }
+  
+  button {
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: #e31c25;
+  }
+  

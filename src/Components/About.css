@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navbar-nav {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 30px;
+    margin-top: 12px;
+  }
+  
+  .nav-link, .homee, .wwe, .wwf {
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  
+  .nav-link:hover {
+    background-color: #ddd;
+  }
+  
+  .nav-item:hover .nav-link, .nav-item:hover .homee, .nav-item:hover .wwe, .nav-item:hover .wwf {
+    color: white;
+    background-color: #e31c25;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .ab {
+    color: #e31c25;
+  }
+  
+  .about-content h1 {
+    font-size: 36px;
+    font-family: 'Audiowide', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .center-container {
+    width: 75%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    background-color: black; /* Set background to black */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .center-image {
+    width: 60%; /* Adjusted width to 60% */
+    height: 90%; /* Adjusted height to 90% */
+    object-fit: cover; /* Ensure the image fits within the specified dimensions */
+    margin-right: 20px; /* Add some space between the image and text */
+  }
+  
+  .center-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .additional-text {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+  }
+  
