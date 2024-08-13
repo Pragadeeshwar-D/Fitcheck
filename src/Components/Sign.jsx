@@ -10,8 +10,7 @@ const Sign = () => {
     password: '',
     confirmPassword: ''
   });
-  const navigate = useNavigate(); // Initialize useNavigate
-
+  const navigate = useNavigate(); 
   const toggleUserState = () => {
     setIsNewUser(!isNewUser);
     setFormData({
@@ -36,12 +35,12 @@ const Sign = () => {
       alert('Passwords do not match. Please enter the correct password.');
       return;
     }
-    // Add your form submission logic here
+
     console.log('Form submitted', formData);
-    navigate('/home'); // Navigate to home page after form submission
+    navigate('/');
   };
 
-  const imageUrl = '/src/Assests/gymOverlayBg.jpg'; // Replace with your background image URL
+  const imageUrl = '/src/Assests/gymOverlayBg.jpg'; 
 
   return (
     <div className="auth-container" style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh' }}>

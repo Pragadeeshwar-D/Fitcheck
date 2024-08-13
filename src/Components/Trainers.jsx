@@ -11,8 +11,9 @@ const Trainers = () => {
   const [distance, setDistance] = useState('');
   const [time, setTime] = useState('');
   const [caloriesBurnt, setCaloriesBurnt] = useState(null);
-  const [sleepLevel, setSleepLevel] = useState('');
+  // const [sleepLevel, setSleepLevel] = useState('');
   const [bmi, setBmi] = useState(null);
+  const [sleepSuggestion, setSleepSuggestion] = useState('');
 
   const calculateWaterIntake = () => {
     const intake = weight * 55;
@@ -26,7 +27,7 @@ const Trainers = () => {
   };
 
   const setRunningGoal = () => {
-    const target = Math.floor(Math.random() * 3000) + 1000; // Random target between 1000 and 4000 meters
+    const target = Math.floor(Math.random() * 3000) + 1000; 
     setRunningTarget(target);
   };
 
@@ -43,6 +44,13 @@ const Trainers = () => {
     }
   };
 
+  const suggestSleepHours = () => {
+    const minHours = 6;
+    const maxHours = 8;
+    const randomHours = Math.floor(Math.random() * (maxHours - minHours + 1)) + minHours;
+    setSleepSuggestion(randomHours);
+  };
+
   return (
     <div className="container">
       <nav className="navbar">
@@ -55,6 +63,12 @@ const Trainers = () => {
           </li>
           <li className="nav-item">
             <a href="/trainer" className="wwf">Tracker</a>
+          </li>
+          <li className="nav-item">
+            <a href="/bmi" className="wwe">Bmi</a>
+          </li>
+          <li className="nav-item">
+            <a href="/addwork" className="wwf">Add workouts</a>
           </li>
           <li className="nav-item">
             <a href="/About" className="wwe">About</a>
@@ -105,8 +119,8 @@ const Trainers = () => {
             )}
           </div>
           <div className="card">
-            <h3 className='wl'>Fat Content</h3>
-            <p>Monitor your fat content</p>
+            <h3 className='wl'>Workout</h3>
+            <p>Your suggested workout for today</p>
             <button className="enter-button" onClick={suggestWorkout}>Check</button>
             {workoutSuggestion && (
               <p className="result">
@@ -151,12 +165,18 @@ const Trainers = () => {
           </div>
           <div className="card">
             <h3 className='wl'>Sleep Level</h3>
-            <input 
+            {/* <input 
               type="text" 
               placeholder="Sleep Level" 
               value={sleepLevel} 
               onChange={(e) => setSleepLevel(e.target.value)} 
-            />
+            /> */}
+            <button className="enter-button" onClick={suggestSleepHours}>Check Suggested Sleep Hours</button>
+            {sleepSuggestion && (
+              <p className="result">
+                You should aim for {sleepSuggestion} hours of sleep today.
+              </p>
+            )}
           </div>
         </div>
       </div>

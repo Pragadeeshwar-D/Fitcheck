@@ -12,6 +12,13 @@ const Plan = () => {
     navigate('/homework');
   };
 
+  const handleCardioNavigation = () => {
+    navigate('/proj');
+  };
+  const handlegymNavigation = () => {
+    navigate('/gym');
+  };
+
   return (
     <div className="plan-container">
       <nav className="navbar">
@@ -24,6 +31,12 @@ const Plan = () => {
           </li>
           <li className="nav-item">
             <Link to="/trainer" className="nav-link">Tracker</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/bmi" className="nav-link">Bmi</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/addwork" className="nav-link">Add workouts</Link>
           </li>
           <li className="nav-item">
             <Link to="/about" className="nav-link">About</Link>
@@ -43,7 +56,7 @@ const Plan = () => {
           <img src={img1} alt='Cardio' className='card-image' />
           <h3 className='card-title'>Cardio</h3>
           <p className='card-description'>Boost your cardiovascular health with our comprehensive cardio plans.</p>
-          <button className="enter-button">Enter</button>
+          <button className="enter-button" onClick={handleCardioNavigation}>Enter</button>
         </div>
         <div className='card'>
           <img src={img2} alt='Home Workout' className='card-image' />
@@ -55,7 +68,7 @@ const Plan = () => {
           <img src={img3} alt='Gym' className='card-image' />
           <h3 className='card-title'>Gym</h3>
           <p className='card-description'>Achieve your fitness goals with our structured gym plans.</p>
-          <button className="enter-button">Enter</button>
+          <button className="enter-button" onClick={handlegymNavigation}>Enter</button>
         </div>
       </div>
     </div>

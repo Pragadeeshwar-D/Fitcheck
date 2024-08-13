@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-// import './HomeWorkouts.css';
+import { useNavigate } from 'react-router-dom';
+import './HomeWorkouts.css';
 
 const workouts = [
-  { id: 1, name: 'Push-ups', description: 'A basic upper body strength exercise.', imageUrl: 'pushup.png' },
-  { id: 2, name: 'Squats', description: 'A fundamental lower body exercise.', imageUrl: 'squats.png' },
-  { id: 3, name: 'Burpees', description: 'A full-body exercise that boosts cardio fitness.', imageUrl: 'Burpees.png' },
-  { id: 4, name: 'Lunges', description: 'A lower body workout targeting the quads and glutes.', imageUrl: 'Lunges.png' },
-  { id: 5, name: 'Plank', description: 'An isometric core strength exercise.', imageUrl: 'Plank.png' },
-  { id: 6, name: 'Mountain Climbers', description: 'A high-intensity cardio move.', imageUrl: 'Mountain-climber.png' },
-  { id: 7, name: 'Bicycle Crunches', description: 'A core exercise that targets the abs.', imageUrl: 'Bicycle.png' },
-  { id: 8, name: 'Jumping Jacks', description: 'A full-body exercise that increases heart rate.', imageUrl: 'Jumping.png' },
-  { id: 9, name: 'Crunches', description: 'A core exercise that targets the abdominal muscles.', imageUrl: 'Crunches.png' },
-  { id: 10, name: 'Russian Twists', description: 'A core exercise targeting the obliques.', imageUrl: 'Russ.png' },
-  { id: 11, name: 'High Knees', description: 'A cardio move that also works the legs.', imageUrl: 'High.png' },
-  { id: 12, name: 'Leg Raises', description: 'A lower abdominal exercise.', imageUrl: 'Leg.png' }
+  { id: 1, name: 'Push-ups', description: 'A basic upper body strength exercise.', imageUrl: 'images/pushup.png' },
+  { id: 2, name: 'Squats', description: 'A fundamental lower body exercise.', imageUrl: 'images/squats.png' },
+  { id: 3, name: 'Burpees', description: 'A full-body exercise that boosts cardio fitness.', imageUrl: 'images/Burpees.png' },
+  { id: 4, name: 'Lunges', description: 'A lower body workout targeting the quads and glutes.', imageUrl: 'images/Lunges.png' },
+  { id: 5, name: 'Plank', description: 'An isometric core strength exercise.', imageUrl: 'images/Plank.png' },
+  { id: 6, name: 'Mountain Climbers', description: 'A high-intensity cardio move.', imageUrl: 'images/Mountain-climber.png' },
+  { id: 7, name: 'Bicycle Crunches', description: 'A core exercise that targets the abs.', imageUrl: 'images/Bicycle.png' },
+  { id: 8, name: 'Jumping Jacks', description: 'A full-body exercise that increases heart rate.', imageUrl: 'images/Jumping.png' },
+  { id: 9, name: 'Crunches', description: 'A core exercise that targets the abdominal muscles.', imageUrl: 'images/Crunches.png' },
+  { id: 10, name: 'Russian Twists', description: 'A core exercise targeting the obliques.', imageUrl: 'images/Russ.png' },
+  { id: 11, name: 'High Knees', description: 'A cardio move that also works the legs.', imageUrl: 'images/High.png' },
+  { id: 12, name: 'Leg Raises', description: 'A lower abdominal exercise.', imageUrl: 'images/Leg.png' }
 ];
 
 const imageStyles = [
@@ -32,11 +33,13 @@ const imageStyles = [
 ];
 
 const HomeWorkouts = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
   const [counts, setCounts] = useState(workouts.reduce((acc, workout) => ({
     ...acc, 
     [workout.id]: { sets: 0, reps: 0, visible: false } 
   }), {}));
   const [showAll, setShowAll] = useState(false);
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   const incrementCount = (id, type) => {
     setCounts((prevCounts) => {
@@ -68,6 +71,7 @@ const HomeWorkouts = () => {
 
   const handleEnterClick = () => {
     setShowAll(true); 
+    setIsButtonClicked(true);
   };
 
   const filteredWorkouts = showAll
@@ -75,34 +79,37 @@ const HomeWorkouts = () => {
     : workouts;
 
   return (
-    <div className="home-workouts">
-      <h1>Home Workouts</h1><br /><br/>
-      <div className="workout-grid">
+    <div className="home-workouts-container">
+       <button className="back-button" onClick={() => navigate('/plan')}>Back</button>
+      <h1>Home Workouts</h1><br /><br/><br/>
+      <div className="workout-grid-container">
         {filteredWorkouts.map((workout, index) => (
-          <div key={workout.id} className={`workout-card ${counts[workout.id].visible ? 'visible' : 'hidden'}`}>
-            <div className="image-container" style={imageStyles[index]}>
+          <div key={workout.id} className={`workout-card-container ${counts[workout.id].visible ? 'visible' : 'hidden'}`}>
+            <div className="workout-image-container" style={imageStyles[index]}>
               <img src={workout.imageUrl} alt={workout.name} className="workout-image" />
             </div>
-            <h2>{workout.name}</h2>
+            <h2 className='workkkk'>{workout.name}</h2>
             <p>{workout.description}</p>
-            <div className="counter">
-              <div className="counter-set">
-                <h3>Sets</h3>
-                <button onClick={() => decrementCount(workout.id, 'sets')}>-</button>
-                <span className='ww'>{counts[workout.id].sets}</span>
-                <button onClick={() => incrementCount(workout.id, 'sets')}>+</button>
+            <div className="counter-container">
+              <div className="counter-set-container">
+                <h3 className='ok1'>Sets</h3>
+                <button className='wwww' onClick={() => decrementCount(workout.id, 'sets')}>-</button>
+                <span className='counter-value'>{counts[workout.id].sets}</span>
+                <button className='wwww' onClick={() => incrementCount(workout.id, 'sets')}>+</button>
               </div>
-              <div className="counter-reps">
-                <h3>Reps</h3>
-                <button onClick={() => decrementCount(workout.id, 'reps')}>-</button>
-                <span className='ww'>{counts[workout.id].reps}</span>
-                <button onClick={() => incrementCount(workout.id, 'reps')}>+</button>
+              <div className="counter-reps-container">
+                <h3 className='ok1'>Reps</h3>
+                <button className='wwww' onClick={() => decrementCount(workout.id, 'reps')}>-</button>
+                <span className='counter-value'>{counts[workout.id].reps}</span>
+                <button className='wwww' onClick={() => incrementCount(workout.id, 'reps')}>+</button>
               </div>
             </div>
           </div>
         ))}
       </div><br></br><br></br>
-      <button className="enter-button" onClick={handleEnterClick}>Enter</button>
+      {!isButtonClicked && (
+        <button className="enter23" onClick={handleEnterClick}>Enter</button>
+      )}
     </div>
   );
 };

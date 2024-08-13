@@ -71,32 +71,32 @@ body {
     height: 300px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the left */
-    background-color: black; /* Set background to black */
+    justify-content: flex-start; 
+    background-color: black; 
     padding: 10px;
     border-radius: 10px;
     margin: 20px 0;
   }
   
   .center-image {
-    width: 60%; /* Adjusted width to 60% */
-    height: 90%; /* Adjusted height to 90% */
-    object-fit: cover; /* Ensure the image fits within the specified dimensions */
-    margin-right: 20px; /* Add some space between the image and text */
+    width: 60%; 
+    height: 90%; 
+    object-fit: cover; 
+    margin-right: 20px; 
   }
   
   .center-text {
     color: white;
     font-size: 24px;
     font-weight: bold;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
   }
   
   .additional-text {
     color: white;
     font-size: 18px;
     margin-top: 10px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
   }
   
   .about-content p {

@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
   background-color: black;
   position: relative;
-  height: 100vh; /* Ensure body covers the full viewport height */
+  height: 100vh;
 }
 .hel{
   font-weight: bold;
@@ -34,7 +34,7 @@ body::before {
   background-image: url(/src/Assests/carousel-2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.5; /* Adjust the opacity value as needed */
+  opacity: 0.5; 
   z-index: -1;
 }
 
@@ -42,20 +42,20 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full height of the viewport */
+  height: 100vh; 
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
 }
 
 .auth-form {
-  background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+  background: rgba(0, 0, 0, 0.7); 
   color: white;
   padding: 20px;
   border-radius: 10px;
   width: 100%;
-  max-width: 400px; /* Maximum width for the form */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for better visibility */
+  max-width: 400px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h2.hel {
@@ -81,14 +81,14 @@ h2.hel {
 }
 
 button.ggg {
-  background-color: transparent; /* Make background transparent */
+  background-color: transparent; 
   border: 3px solid white;
   color: white;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: block;
-  width: 100%; /* Full width */
+  width: 100%; 
   font-size: 16px;
   font-weight: bold;
   margin-left: 2px;
@@ -97,8 +97,8 @@ button.ggg {
 }
 
 button.ggg:hover {
-  background-color: white; /* Change background to white on hover */
-  color: #e31c25; /* Ensure text color remains readable */
+  background-color: white; 
+  color: #e31c25; 
 }
 
 .toggle-button {

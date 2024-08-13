@@ -4,16 +4,9 @@ body {
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: black;
     position: relative;
-  }
-  
-  h3 {
-    color: white;
-  }
-  
-  .ww {
-    color: white;
+    overflow-y: scroll;
   }
   
   body::before {
@@ -23,34 +16,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('bg.jpg'); 
+    background-image: url('/src/Assests/carousel-1.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.5;
     z-index: -1;
   }
-  .ww1{
-    margin-top: 0;
-    background-color:white;
-    color: #e31c25;
+  
+  h1 {
     display: flex;
     justify-content: center;
+    color: #e31c25;
+    margin: 20px 0;
   }
-  h1 {
-    /* background-color: rgb(196, 96, 96); */
-    margin-left: 0;
-    /* top: 0; */
-    margin-right: 0;
-  }
-  .gym-workouts {
+  
+  .home-workouts-wrapper {
     width: 95%;
     margin: 0 auto;
-    margin-left: 40px;
     padding: 20px;
     box-sizing: border-box;
   }
   
-  .workout-grid {
+  .workout-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -59,7 +46,7 @@ body {
   
   .workout-card {
     position: relative;
-    background-color: black;
+    background-color: white;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -72,72 +59,129 @@ body {
     transform: translateY(-10px);
   }
   
-  .image-container {
+  .image-wrapper {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     overflow: visible;
+    transition: transform 0.3s ease-in-out;
   }
   
-  .workout-image {
-    width: 100%;
+  .workout-img {
+    display: block;
+    max-width: 100%;
     height: auto;
+    border-radius: 10px;
   }
   
-  .workout-card h2 {
-    margin-top: 60px;
-    color: #e31c25;
-    text-align: center;
+  .counter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
   }
   
-  .workout-card p {
+  .counter-label {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  
+  .counter-btn {
+    background-color: black;
     color: white;
-    text-align: center;
-  }
-  
-  .counter {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-  }
-  
-  .counter-set, .counter-reps {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .counter-set button, .counter-reps button {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 16px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .counter-set span, .counter-reps span {
-    font-size: 18px;
-    margin: 0 5px;
-  }
-  
-  .enter-button {
-    bottom: 20px;
-    left: 20px;
-    background-color:none ;
-    color: #fff;
-    border: white;
-    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
+    padding: 5px 10px;
     cursor: pointer;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    /* transition: background-color 0.3s ease; */
+    transition: background-color 0.3s ease;
   }
   
-  .button:hover {
-    background-color: white;
-    color: #000;
+  .counter-btn:hover {
+    background-color: #bf0018;
   }
   
+  .counter-number {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .entry-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #e31c25;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .entry-btn:hover {
+    background-color: #bf0018;
+  }
+
+  @media (max-width: 768px) {
+    .workout-cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      row-gap: 90px;
+    }
+  
+    .workout-card {
+      padding: 20px;
+    }
+  
+    .image-wrapper {
+      width: 200px; 
+    }
+  
+    .counter-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .counter-btn {
+      padding: 5px 8px;
+    }
+  
+    .counter-number {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .workout-cards-container {
+      grid-template-columns: 1fr;
+      row-gap: 90px;
+    }
+  
+    .workout-card {
+      padding: 10px;
+   
+    }
+  
+    .image-wrapper {
+      width: 180px;
+    }
+  
+    .counter-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .counter-btn {
+      padding: 4px 8px;
+      font-size: 14px;
+    }
+  
+    .counter-number {
+      font-size: 12px;
+    }
+  
+    .entry-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
   

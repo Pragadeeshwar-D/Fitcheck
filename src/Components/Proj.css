@@ -1,0 +1,277 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+.navbarSpacer {
+  align-self: flex-start;
+}
+
+.navbarContainer {
+  background-color: transparent;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbarList {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarItem {
+  margin-right: 30px;
+  margin-top: 12px;
+  position: relative;
+}
+
+.navbarLink, .homeLink, .workoutLink, .goalsLink, .contactLink {
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.navbarLink:hover {
+  background-color: #ddd;
+}
+
+.navbarItem:hover .navbarLink, .navbarItem:hover .homeLink, .navbarItem:hover .workoutLink, .navbarItem:hover .goalsLink, .navbarItem:hover .contactLink {
+  color: white;
+  background-color: #e31c25; 
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.goalSection {
+  padding-top: 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.goalCard {
+  max-width: 300px;
+  margin: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: -20px; 
+}
+
+.goalCard:hover {
+  transform: translateY(-10px);
+}
+
+.goalCardBody {
+  padding: 1rem 1rem 0.5rem;
+  width: 300px;
+}
+
+.goalCardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.goalCardText {
+  margin-bottom: 1rem;
+
+}
+
+.goalButton {
+  background-color: #e31c25;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.goalButton:hover {
+  background-color: white;
+  color: #e31c25;
+}
+
+.goalList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.goalListItem {
+  margin-bottom: 0.5rem;
+}
+
+.goalDropdownContainer {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+}
+
+.categoryDropdown, .goalOptionsDropdown, .addGoalButton {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.leftContent, .rightContent {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.tomorrowGoalsContainer {
+  max-width: 600px;
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  transition-duration: 0.3s;
+}
+.tomorrowGoalsContainer:hover
+{
+  transform: translateY(-10px);
+}
+
+.tomorrowGoalsHeader {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.goalTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.goalTable th, .goalTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  
+}
+
+.goalTable th {
+  background-color: #f2f2f2;
+}
+
+.deleteGoalButton {
+  background-color: #e31c25;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.deleteGoalButton:hover {
+  background-color: #b81c1e;
+}
+
+.resetGoalsButton {
+  background-color: #e31c25;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resetGoalsButton:hover {
+  background-color: white;
+  color: #e31c25;
+}
+
+.setGoalsSection {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: 15px;
+  width: 600px;
+  transition-duration: 0.3s;
+
+}
+.setGoalsSection:hover
+{
+  transform: translateY(-10px);
+}
+
+.achievementDashboard {
+  margin-top: 10px;
+  margin-left: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  text-align: center;
+  transition-duration: 0.3s;
+}
+.achievementDashboard:hover
+{
+  transform: translateY(-10px);
+}
+
+.dashboardHeader {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.achievementCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.achievementBox {
+  text-align: center;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.achievementSeparator {
+  width: 2px;
+  background-color: #ccc;
+  margin-left: 0.5px;
+  padding-bottom: 100px;
+}
+.addGoalButton
+{
+  background-color: #e31c25;
+  color: white;
+  border:white ;
+}

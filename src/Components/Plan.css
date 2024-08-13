@@ -25,9 +25,9 @@ body::before {
 
 .navbar {
   background-color: transparent;
-  padding: 15px 40px;
+  padding: 15px 20px; 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; 
   align-items: center;
 }
 
@@ -39,8 +39,7 @@ body::before {
 }
 
 .nav-item {
-  margin-right: 30px;
-  margin-top: 12px;
+  margin-right: 15px; 
   position: relative;
 }
 
@@ -49,8 +48,8 @@ body::before {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 20px;
-  padding: 10px 20px;
+  font-size: 16px; 
+  padding: 8px 15px; 
 }
 
 .nav-link:hover {
@@ -66,28 +65,30 @@ body::before {
 
 .plan-hero-section {
   text-align: center;
-  margin: 50px 0;
+  margin: 40px 10px;
 }
 
 .plan-title {
   color: #e31c25;
-  font-size: 36px;
+  font-size: 28px; 
   font-weight: bold;
 }
 
 .card-container {
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
+  flex-wrap: wrap; 
+  justify-content: center;
+  padding: 10px;
 }
 
 .card {
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 20px;
+  padding: 15px; 
   border-radius: 10px;
-  width: 200px;
-  height: 300px; /* Increased height */
+  width: 90%; 
+  max-width: 300px; 
+  margin: 10px; 
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -98,8 +99,8 @@ body::before {
 }
 
 .card-image {
-  width: 100px;
-  height: 100px;
+  width: 80px; 
+  height: 80px; 
   border-radius: 50%;
   object-fit: cover;
 }
@@ -113,21 +114,48 @@ body::before {
 }
 
 .enter-button {
-  background-color: transparent; 
+  background-color: transparent;
   border: 3px solid white;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 15px; 
   text-align: center;
   text-decoration: none;
   display: block;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px; 
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 15px; 
   cursor: pointer;
 }
 
 .enter-button:hover {
-  background-color: white; 
-  color: #e31c25; 
+  background-color: white;
+  color: #e31c25;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+
+  .plan-title {
+    font-size: 24px; 
+  }
+
+  .card-container {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0; 
+  }
 }

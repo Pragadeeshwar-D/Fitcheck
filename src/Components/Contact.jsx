@@ -7,13 +7,19 @@ const Contact = () => {
       <nav className="navbar">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a href="/home" className="homee">Home</a>
+            <a href="/" className="homee">Home</a>
           </li>
           <li className="nav-item">
             <a href="/Plan" className="wwe">Plan</a>
           </li>
           <li className="nav-item">
             <a href="/trainer" className="wwf">Tracker</a>
+          </li>
+          <li className="nav-item">
+            <a href="/bmi" className="wwf">Bmi</a>
+          </li>
+          <li className="nav-item">
+            <a href="/bmi" className="wwf">Add workouts</a>
           </li>
           <li className="nav-item">
             <a href="/about" className="wwe">About</a>

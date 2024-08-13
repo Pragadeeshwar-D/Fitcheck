@@ -83,7 +83,7 @@ body {
   }
   
   .contact-inputs {
-    width: calc(100% - 22px); /* Uniform size for all input fields */
+    width: calc(100% - 22px); 
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;

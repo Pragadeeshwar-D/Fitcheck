@@ -1,148 +1,190 @@
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
-    position: relative;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  position: relative;
+  overflow-y: scroll;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/Assests/carousel-1.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: #e31c25;
+  margin: 20px 0;
+}
+.wwww {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.wwww:hover {
+  background-color: white;
+  color: #000;
+}
+.ok1{
+  color: black;
+}
+
+.home-workouts-container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.workout-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  row-gap: 100px;
+}
+
+.workout-card-container {
+  position: relative;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+
+.workout-card-container:hover {
+  transform: translateY(-10px);
+}
+
+
+.workout-image-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.workout-image {
+  width: 100%;
+  height: auto;
+}
+
+.workout-card-container h2 {
+  margin-top: 60px;
+  color: #333;
+  text-align: center;
+}
+
+.workout-card-container p {
+  color: #666;
+  text-align: center;
+}
+
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+
+.counter-set-container button, .counter-reps-container button {
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.counter-set-container span, .counter-reps-container span {
+  font-size: 18px;
+  margin: 0 5px;
+}
+
+
+@media (max-width: 768px) {
+  .workout-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
   }
-  
-  h3 {
-    color: #000;
+
+  .workout-image-container {
+    width: 220px; 
   }
-  
-  .ww {
-    color: #000;
+
+  .workout-card-container {
+    padding: 40px;
   }
-  
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/src/Assests/carousel-1.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    z-index: -1;
+
+  .counter-container {
+    flex-direction: column;
   }
-  
-  h1 {
-    /* background-color: white; */
-    display: flex;
-    justify-content: center;
-    color: #e31c25;;
-    margin-left: 0;
-    margin-right: 0;
+
+  .counter-set-container, .counter-reps-container {
+    margin: 10px 0;
   }
-  
-  .home-workouts {
-    width: 95%;
-    margin: 0 auto;
-    margin-left: 40px;
-    padding: 20px;
-    box-sizing: border-box;
+
+  .enter23, .back-button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
-  
-  .workout-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+  .wwww {
+    padding: 8px 16px;
   }
-  
-  .workout-card {
-    position: relative;
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    overflow: visible;
-    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .workout-grid-container {
+    grid-template-columns: 1fr;
+    row-gap: 90px;
   }
-  
-  .workout-card:hover {
-    transform: translateY(-10px);
+
+  .workout-image-container {
+    width: 180px; 
   }
-  
-  .image-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: visible;
+
+  .workout-card-container {
+    padding: 30px;
   }
-  
-  .workout-image {
-    width: 100%;
-    height: auto;
+
+  .counter-set-container, .counter-reps-container {
+    flex-direction: column;
+    margin: 10px 0;
   }
-  
-  .workout-card h2 {
-    margin-top: 60px;
-    color: #333;
-    text-align: center;
+
+  .enter23, .back-button {
+    font-size: 12px;
+    padding: 6px 12px;
   }
-  
-  .workout-card p {
-    color: #666;
-    text-align: center;
+
+  .wwww {
+    padding: 6px 12px;
   }
-  
-  .counter {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-  }
-  
-  .counter-set, .counter-reps {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .counter-set button, .counter-reps button {
-    display: inline-block;
-  }
-  
-  .counter-set button, .counter-reps button {
-    padding: 5px 10px;
-    font-size: 16px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .counter-set span, .counter-reps span {
-    font-size: 18px;
-    margin: 0 5px;
-  }
-  
-  .counter-set {
-    margin-right: 20px; 
-  }
-  
-  .counter-reps {
-    margin-left: 20px; 
-  }
-  
-  .button {
-    bottom: 20px;
-    left: 20px;
-    background-color: black;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: white;
-    color: #000;
-  }
+}
